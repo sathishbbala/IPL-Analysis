@@ -21,7 +21,7 @@ A Power BI Dashboard that provides comprehensive insights into Indian Premier Le
 ## 📐 Data Model & DAX Measures
 This project utilizes a Star Schema data model, connecting a central Fact table (ball by ball) with multiple Dimension tables (Teams, Players, Matches).
 Some of the key DAX measures created for this dashboard include:
-'''
+''' dax
 NumberOfCenturies = 
 VAR SelectedSeason = SELECTEDVALUE(ipl_matches_data[season])
 VAR SeasonData = FILTER(ball_by_ball_data, RELATED(ipl_matches_data[season]) = SelectedSeason)
@@ -52,10 +52,4 @@ RETURN
    2. Download and install Power BI Desktop (if you haven't already).
    3. Open the .pbix file included in this repository.
    4. (Optional) If the data paths break, redirect the data source settings to the CSV files inside the /Data folder.
-
-------------------------------
-## 💡 Pro-Tip for your GitHub Repository
-To make this look even better, you can add a folder named images to your repository, save a screenshot of your dashboard there as dashboard.png, and display it under the preview section using this markdown code:
-
-![Dashboard Preview](images/dashboard.png)
 
