@@ -21,7 +21,7 @@ A Power BI Dashboard that provides comprehensive insights into Indian Premier Le
 ## 📐 Data Model & DAX Measures
 This project utilizes a Star Schema data model, connecting a central Fact table (ball by ball) with multiple Dimension tables (Teams, Players, Matches).
 Some of the key DAX measures created for this dashboard include:
-''' dax
+``` dax
 NumberOfCenturies = 
 VAR SelectedSeason = SELECTEDVALUE(ipl_matches_data[season])
 VAR SeasonData = FILTER(ball_by_ball_data, RELATED(ipl_matches_data[season]) = SelectedSeason)
@@ -45,7 +45,7 @@ VAR CountOfCenturies =
 RETURN
     -- Step 3: Return the count (or 0 if they haven't scored a century)
     IF(ISBLANK(CountOfCenturies), 0, CountOfCenturies)
-'''
+```
 ## ⚙️ How to Run This Project Locally
 
    1. Clone this repository to your local machine.
